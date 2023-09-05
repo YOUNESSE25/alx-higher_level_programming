@@ -12,12 +12,10 @@ int check_cycle(listint_t *list)
 
 	while (s && ft->next)
 	{
-		if (s == ft)
-		{
-			return (1);
-		}
 		s = s->next;
 		ft = ft->next->next;
+		if (s == ft)
+			return (1);
 	}
 	return (0);
 }
