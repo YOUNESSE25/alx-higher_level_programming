@@ -4,7 +4,7 @@ if __name__ == "__main__":
     cont = len(sys.argv) - 1
 
     if cont == 0:
-        print("{} argument.".format(cont))
+        print("{} arguments.".format(cont))
     elif cont == 1:
         print("{} argument:".format(cont))
     else:
