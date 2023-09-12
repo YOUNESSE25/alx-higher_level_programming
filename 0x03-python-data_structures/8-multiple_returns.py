@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def multiple_returns(sentence):
-    l = len(sentence)
-    if l == 0:
+    longg = len(sentence)
+    if longg == 0:
         r = (0, None)
         return r
     else:
