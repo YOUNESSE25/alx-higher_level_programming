@@ -5,5 +5,5 @@ def multiple_returns(sentence):
         r = (0, None)
         return r
     else:
-        r = (l, sentence[0:1])
+        r = (longg, sentence[0:1])
         return r
