@@ -16,6 +16,7 @@ class Rectangle:
         """ Rectangle deleted"""
         type(self).number_of_instances -= 1
         print("Bye rectangle...")
+
     @property
     def width(self):
         """ get width"""
