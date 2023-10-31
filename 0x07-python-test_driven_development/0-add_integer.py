@@ -1,11 +1,9 @@
 #!/usr/bin/python3
-"""
-This module is composed by a function that adds 2 integers.
-"""
+"""This module is composed by a function that adds 2 integers."""
 
 
 def add_integer(a, b=98):
-    """ Return the addition of 2 numb"""
+    """ addition 2 numb"""
 
     if not isinstance(a, int) and not isinstance(a, float):
         raise TypeError("a must be an integer")
