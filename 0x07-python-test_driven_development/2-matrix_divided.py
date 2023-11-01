@@ -16,7 +16,7 @@ def matrix_divided(matrix, div):
     if not matrix or not isinstance(matrix, list):
         raise TypeError(m)
 
-    l = 0
+    llen = 0
     msize = "Each row of the matrix must have the same size"
 
     for element in matrix:
@@ -24,14 +24,15 @@ def matrix_divided(matrix, div):
         if not element or not isinstance(element, list):
             raise TypeError(m)
 
-        if l != 0 and len(element) != l:
+        if llen != 0 and len(element) != l:
             raise TypeError(msize)
 
         for num in element:
             if not type(num) in (int, float):
                 raise TypeError(m)
 
-        l = len(element)
+        llen = len(element)
 
-    newmatrix = list(map(lambda x: list(map(lambda y: round(y / div, 2), x)), matrix))
+    newmatrix = list(map(lambda x: list(
+        map(lambda y: round(y / div, 2), x)), matrix))
     return (newmatrix)
