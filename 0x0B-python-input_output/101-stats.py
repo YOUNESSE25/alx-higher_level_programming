@@ -33,7 +33,7 @@ if __name__ == "__main__":
                 pass
 
             try:
-                if line[-2] in :
+                if line[-2] in validcodes:
                     if status_codes.get(line[-2], -1) == -1:
                         status_codes[line[-2]] = 1
                     else:
