@@ -8,14 +8,14 @@ import MySQLdb
 
 
 if __name__ == "__main__":
-    datab = MySQLdb.connect(host="localhost", user=sys.argv[1],
-                         passwd=sys.argv[2], datab=sys.argv[3], port=3306)
-    curseur = datab.cursor()
-    curseur.execute("""SELECT cities.name FROM
+    db = MySQLdb.connect(host="localhost", user=sys.argv[1],
+                         passwd=sys.argv[2], db=sys.argv[3], port=3306)
+    cur = db.cursor()
+    cur.execute("""SELECT cities.name FROM
                 cities INNER JOIN states ON states.id=cities.state_id
                 WHERE states.name=%s""", (sys.argv[4],))
-    linges = curseur.fetchall()
-    tmp = list(linge[0] for linge in linges)
+    rows = cur.fetchall()
+    tmp = list(row[0] for row in rows)
     print(*tmp, sep=", ")
-    curseur.close()
-    datab.close()
+    cur.close()
+    db.close()
