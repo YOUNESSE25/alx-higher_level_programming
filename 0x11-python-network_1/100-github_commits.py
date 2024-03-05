@@ -5,8 +5,9 @@ import requests
 
 
 if __name__ == "__main__":
-    U = "https://api.github.com/repos/{}/{}/commits".format(sys.argv[2], sys.argv[1])
-    req = requests.get(U)
+    URL = "https://api.github.com/repos/{}/{}/commits".format(
+            sys.argv[2], sys.argv[1])
+    req = requests.get(URL)
     commits = req.json()
     try:
         for i in range(10):
