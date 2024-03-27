@@ -7,7 +7,6 @@ req(url, function (err, response, body) {
     Characters_print(characters, 0);
   }
 });
-
 function Characters_print (characters, index) {
   req(characters[index], function (error, response, body) {
     if (!error) {
