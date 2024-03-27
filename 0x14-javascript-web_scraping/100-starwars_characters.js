@@ -12,8 +12,8 @@ request(url, function (err, response, body) {
         if (error) {
           console.log(error);
         } else {
-          data = JSON.parse(content);
-          console.log(data.name);
+          def = JSON.parse(content);
+          console.log(def.name);
         }
       });
     });
